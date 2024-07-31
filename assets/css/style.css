@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+:root {
+  --night-color-1: #2E4374; /* rgb(46, 67, 116) */
+  --night-color-2: #4B527E; /* rgb(75, 82, 126) */
+  --night-color-3: #7C81AD; /* rgb(124, 129, 173) */
+  --night-color-4: #E5C3A6; /* rgb(229, 195, 166) */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--night-color-1);
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-size: 1.6rem;
+  color: var(--night-color-4);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (768px <= width) {
+  .s {
+    display: none;
+  }
+}
+
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 30px 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 120px 60px;
+  border-color: transparent transparent var(--night-color-2) transparent;
+}
+.container {
+
+}
+
+
+/* ----- nav ----- */
+.menu > li + li {
+  margin-block-start: 50px;
+}
+
+.menuItem > a {
+  line-height: 1.5;
+  font-size: 2rem;
+}
