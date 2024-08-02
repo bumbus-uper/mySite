@@ -10,3 +10,13 @@
   addEventListener('resize', switchViewport, false);
   switchViewport();
 })();
+
+
+$(function() {
+  // book tab
+  $('.yearTab > li').on('click', function() {
+    $(this).addClass('is-choised').siblings().removeClass('is-choised');
+    $('.yearContent').eq($(this).index()).addClass('is-choised').siblings().removeClass('is-choised');
+  });
+
+})

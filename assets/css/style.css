@@ -79,3 +79,101 @@ img {
   line-height: 1.5;
   font-size: 2rem;
 }
+
+
+
+/* ----------
+    book
+---------- */
+.book .wrapper::after {
+  position: fixed;
+}
+.book .container {
+  min-height: calc(100vh - 30px * 2);
+  min-height: calc(100dvh - 30px * 2);
+}
+
+.yearTab {
+  margin-block: 30px;
+  display: flex;
+  gap: 15px;
+}
+.yearTab > li {
+  padding: 10px 20px;
+}
+.yearTab > li.is-choised {
+  text-decoration: underline;
+}
+
+.yearContent {
+  display: none;
+}
+.yearContent.is-choised {
+  display: block;
+}
+
+.book .container {
+  width: 100%;
+}
+
+.bookList > li + li {
+  margin-block-start: 50px;
+}
+
+.bookCard {
+
+}
+.bookCard-ttl {
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.bookCard-info {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+  font-size: 1.4rem;
+}
+.bookCard-author {
+  padding-inline-end: 1em;
+  white-space: nowrap;
+}
+.bookCard-pub {
+  position: relative;
+  padding-inline-start: 1em;
+  white-space: nowrap;
+}
+.bookCard-pub::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: -50% -50%;
+  display: block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--night-color-4);
+}
+
+.flowMark {
+  position: fixed;
+  z-index: 1;
+  top: 50vh;
+  right: 4%;
+  padding-inline-start: 30px;
+  border-bottom: 1px solid var(--night-color-4);
+  transform-origin: 100% 0;
+  rotate: 90deg;
+}
+.flowMark::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 60%;
+  background-color: var(--night-color-4);
+  transform-origin: 0 100%;
+  rotate: 45deg;
+}
