@@ -43,6 +43,42 @@ img {
 }
 
 
+/* ----------
+    common
+---------- */
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.backHome {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+.backHome::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-left: 2px solid var(--night-color-4);
+  border-bottom: 2px solid var(--night-color-4);
+  rotate: 45deg;
+}
+
+
 .wrapper {
   position: relative;
   min-height: 100vh;
@@ -100,6 +136,8 @@ img {
 }
 .yearTab > li {
   padding: 10px 20px;
+  pointer-events: all;
+  cursor: pointer;
 }
 .yearTab > li.is-choised {
   text-decoration: underline;
